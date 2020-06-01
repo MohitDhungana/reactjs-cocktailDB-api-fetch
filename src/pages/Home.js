@@ -5,7 +5,7 @@ import SearchForm from '../components/SearchForm';
 
 export default function Home() {
   const [loading, setLoading] = React.useState(false);
-  const [searchTerm, setsearchTerm] = React.useState('d');
+  const [searchTerm, setSearchTerm] = React.useState('d');
   const [cocktails, setcocktails] = React.useState([]);
 
   React.useEffect(() => {
@@ -48,7 +48,7 @@ export default function Home() {
 
   return (
     <main>
-      <SearchForm setsearchTerm={setsearchTerm} />
+      <SearchForm setSearchTerm={setSearchTerm} />
       <CocktailsList loading={loading} cocktails={cocktails} />
     </main>
   );
